@@ -6,12 +6,17 @@ SPA（SinglePageApplication）のフレームワーク[Aurelia](http://aurelia.i
 
 # 起動手順
 1. [NodeJS](http://nodejs.org/)をインストール
+2. Aurelia等の依存ファイルをインストール
   
-2. サーバ起動
+    ```shell
+    npm install
+    ```
+
+3. サーバ起動
 
     ```shell
     node server.js
     ```
   
-3. ブラウザでhttp://localhost:8080にアクセス
+4. ブラウザでhttp://localhost:8080にアクセス
 
