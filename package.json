@@ -1,0 +1,37 @@
+{
+  "name": "examIPA",
+  "version": "0.0.1",
+  "description": "Sample using Aurelia.",
+  "keywords": [
+    "aurelia",
+    "sample"
+  ],
+  "homepage": "https://github.com/TerAuma88/examIPA",
+  "bugs": {
+    "url": "https://github.com/TerAuma88/examIPA/issues"
+  },
+  "license": "MIT",
+  "author": "terauma",
+  "main": "dist/main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TerAuma88/examIPA.git"
+  },
+  "jspm": {
+    "dependencies": {
+      "aurelia-bootstrapper": "npm:aurelia-bootstrapper@^1.0.0-beta.1.2.0",
+      "bootstrap": "github:twbs/bootstrap@^3.3.5",
+      "font-awesome": "npm:font-awesome@^4.5.0"
+    },
+    "devDependencies": {
+      "traceur": "github:jmcriffey/bower-traceur@0.0.92",
+      "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.92"
+    }
+  },
+  "dependencies": {
+    "babel": "5.8.23",
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "serve-static": "^1.10.0"
+  }
+}
