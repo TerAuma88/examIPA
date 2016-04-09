@@ -1,25 +1,62 @@
-import {inject} from 'aurelia-framework';
-import {HttpClient} from 'aurelia-fetch-client';
-import 'fetch';
+import request from 'superagent';
 
-@inject(HttpClient)
 export class Question{
-  constructor(http) {
-    http.configure(config => {
-      config.useStandardConfiguration();
-    });
-    this.http = http;
+  heading = "平成27年度春 PM 午前Ⅱ";
+  reference = "平成27年度春 PM 午前Ⅱ問";
+  n = 25;
+  question = {};
+  check;
+  
+  constructor() {
+    this.isAnswer = false;
   }
   activate() {
-    return this.http.fetch('resources/h27s/PM/AM2/q1.json')
-      .then(question => {
-        this.reference = "平成27年度 春期 PM 午前Ⅱ 問" + question.seq;
-        this.sentence = question.sentence;
-        this.answers = question.answers;
-        this.correctAnswer = question.correctAnswer;
-        this.comment = question.comment;
-
+    this.seq = 1;
+    request.post('/question')
+    .send({quest:'resources/h27s/PM/AM2/q1'})
+    .end((err,res) => {
+      this.question = JSON.parse(res.body);
+    });
+  }
+  
+  showAnswer() {
+    this.isAnswer = true;
+    if (this.check === this.question.correctAnswer) {
+      this.isCorrect = "resources/icons/maru.png";
+    } else {
+      this.isCorrect = "resources/icons/batsu.png";
+    }
+  }
+  
+  nextQuestion() {
+    this.isAnswer = false;
+    this.seq = this.seq + 1;
+    if(this.seq > this.n){
+      location.replace('/#/');
+    } else {
+      request.post('/question')
+      .send({quest:'resources/h27s/PM/AM2/q'+this.seq})
+      .end((err,res) => {
+        this.question = JSON.parse(res.body);
       });
+    }
+  }
+  
+  get correctAnswer() {
+    switch(this.question.correctAnswer) {
+      case 'a': return "ア"; break;
+      case 'i': return "イ"; break;
+      case 'u': return "ウ"; break;
+      case 'e': return "エ"; break;
+      default : return "不明"; break;
+    }
+  }
+  get next() {
+    if(this.seq < this.n) {
+      return "次へ";
+    } else {
+      return "終わり";
+    }
   }
 
 }

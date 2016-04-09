@@ -10,6 +10,12 @@ app.use(bodyParser.urlencoded({ extended: true}));
 app.use(serveStatic('.'));
 app.use(express.static('src'));
 
+app.post('/question', function(req, res) {
+  var a = fs.readFileSync(req.body.quest + '.json', 'utf8');
+  // console.log(a);
+  res.json(a);
+});
+
 app.listen(port, function() {
     console.log("listening http on port " + port)
 });

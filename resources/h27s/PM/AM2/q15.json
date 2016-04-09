@@ -1,0 +1,15 @@
+{
+  "seq": "15",
+  "sentence": "あ",
+  "answers": {
+    "a": "あ",
+    "i": "あ",
+    "u": "あ",
+    "e": "あ"
+  },
+  "correctAnswer": "あ",
+  "comment":{
+    "ref": "",
+    "text": ""
+  }
+}
