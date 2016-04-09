@@ -10,6 +10,7 @@ SPA（SinglePageApplication）のフレームワーク[Aurelia](http://aurelia.i
   
     ```shell
     npm install
+    jspm install -y
     ```
 
 3. サーバ起動
