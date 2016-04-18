@@ -3,24 +3,24 @@
     <h3>${heading}</h3>
     <div>
       <h4>【問題】</h4>
-      <div>${question.sentence}</div>
+      <div innerHTML.bind="question.sentence"></div>
       <form role="form" submit.delegate="showAnswer()">
         <ul>
           <li>
           <label><input type="radio" name="answer" value="a" id="a" checked.bind="check">ア：</label>
-          <label for="a" >${question.answers.a}</label>
+          <label for="a" innerHTML.bind="question.answers.a"></label>
           </li>
           <li>
           <input type="radio" name="answer" value="i" id="i" checked.bind="check"><label>イ：</label>
-          <label for="i">${question.answers.i}</label>
+          <label for="i" innerHTML.bind="question.answers.i"></label>
           </li>
           <li>
           <input type="radio" name="answer" value="u" id="u" checked.bind="check"><label>ウ：</label>
-          <label for="u">${question.answers.u}</label>
+          <label for="u" innerHTML.bind="question.answers.u"></label>
           </li>
           <li>
           <input type="radio" name="answer" value="e" id="e" checked.bind="check"><label>エ：</label>
-          <label for="e">${question.answers.e}</label>
+          <label for="e" innerHTML.bind="question.answers.e"></label>
           </li>
         </ul>
         <div>出展：<cite>${reference}${question.seq}</cite></div>
@@ -33,7 +33,7 @@
       <button click.delegate="nextQuestion(2)">${next}</button>
       <h4>【解説】</h4>
       <blockquote cite=${question.comment.ref}>
-        <p>${question.comment.text}</p>
+        <p innerHTML.bind="question.comment.text"></p>
       </blockquote>
     </div>
   </section>
