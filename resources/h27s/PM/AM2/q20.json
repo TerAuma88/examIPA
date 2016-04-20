@@ -1,13 +1,13 @@
 {
   "seq": "20",
-  "sentence": "あ",
+  "sentence": "新システムの開発を計画している。提案された4案の中で、TC0 (総所有費用) が最小のものはどれか。ここで、このシステムは開発後、3年間使用されるものとする。<br /><img src='/resources/h27s/PM/AM2/fig_q20_1.png'/>",
   "answers": {
-    "a": "あ",
-    "i": "あ",
-    "u": "あ",
-    "e": "あ"
+    "a": "A案",
+    "i": "B案",
+    "u": "C案",
+    "e": "D案"
   },
-  "correctAnswer": "あ",
+  "correctAnswer": "u",
   "comment":{
     "ref": "",
     "text": ""
