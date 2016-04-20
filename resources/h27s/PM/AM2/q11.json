@@ -1,11 +1,11 @@
 {
   "seq": "11",
-  "sentence": "ファンクションポイント法の一つであるIFPUG法では、機能を機能種別に従ってデ ータファンクションとトランザクションファンクションとに分類する。機能種別を適切に分類したものはどれか。〔機能種別〕",
+  "sentence": "ファンクションポイント法の一つであるIFPUG法では、機能を機能種別に従ってデ ータファンクションとトランザクションファンクションとに分類する。<br />機能種別を適切に分類したものはどれか。<br />〔機能種別〕<br />EI：外部入力<br />EIF：外部インターフェース<br />EO：外部出力<br />EQ：外部参照<br />ILF：内部論理ファイル<br /><img src='/resources/h27s/PM/AM2/fig_q11_1.png'/>",
   "answers": {
-    "a": "EI, EO, EQ EIF, ILF",
-    "i": "EIF, EQ, ILF EI, EO",
-    "u": "EIF, ILF EI, EO, EQ",
-    "e": "ILF EI, EIF, EO, EQ"
+    "a": "",
+    "i": "",
+    "u": "",
+    "e": ""
   },
   "correctAnswer": "u",
   "comment":{
