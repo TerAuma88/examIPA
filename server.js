@@ -8,7 +8,7 @@ var port = 8080;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(serveStatic('.'));
-app.use(express.static('src'));
+app.use(express.static('public'));
 
 app.post('/question', function(req, res) {
   var a = fs.readFileSync(req.body.quest + '.json', 'utf8');
