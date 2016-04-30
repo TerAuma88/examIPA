@@ -1,7 +1,7 @@
 <template>
   <section>
     <h3>${heading}</h3>
-    <div>
+    <div if.bind="isLoaded">
       <h4>【問題】</h4>
       <div innerHTML.bind="question.sentence"></div>
       <form role="form" submit.delegate="showAnswer()">
@@ -36,6 +36,10 @@
         <p innerHTML.bind="question.comment.text"></p>
         <p>出展：<cite>${question.comment.ref}</cite></p>
       </blockquote>
+    </div>
+    <div if.bind="!isLoaded" class="splash">
+      <i class="fa fa-spinner fa-spin"></i>
+      <div>loading</div>
     </div>
   </section>
 </template>

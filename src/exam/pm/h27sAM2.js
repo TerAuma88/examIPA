@@ -12,11 +12,10 @@ export class Question{
   }
   activate() {
     this.seq = 1;
-    request.post('/question')
-    .send({quest:'resources/h27s/PM/AM2/q1'})
-    .end((err,res) => {
-      this.question = JSON.parse(res.body);
-    });
+    
+  }
+  attached() {
+    this.getQuestion(this.seq);
   }
   
   showAnswer() {
@@ -34,12 +33,17 @@ export class Question{
     if(this.seq > this.n){
       location.replace('/#/');
     } else {
-      request.post('/question')
-      .send({quest:'resources/h27s/PM/AM2/q'+this.seq})
-      .end((err,res) => {
-        this.question = JSON.parse(res.body);
-      });
+      this.getQuestion(this.seq);
     }
+  }
+  getQuestion(number) {
+    this.isLoaded = false;
+    request.post('/question')
+    .send({quest:'resources/h27s/PM/AM2/q'+number})
+    .end((err,res) => {
+      this.question = JSON.parse(res.body);
+      this.isLoaded = true;
+    });
   }
   
   get correctAnswer() {
