@@ -1,5 +1,30 @@
 <template>
+  <require from="exam/components/category"></require>
+  <require from="exam/components/year"></require>
+  <require from="exam/components/hour"></require>
+  <require from="exam/components/num"></require>
   <section>
-    <div>リストから選択してください。</div>
+    <p>プロジェクトマネージャ試験 平成27年度春 午前Ⅱのみ実装しています。</p>
+    <table>
+      <tr>
+      <td>試験区分:</td>
+      <td><category selected.two-way="params.category"></category></td>
+      </tr>
+      <tr>
+      <td>時間帯:</td>
+      <td><hour selected.two-way="params.hour"></hour></td>
+      </tr>
+      <tr>
+      <td>試験年度:</td>
+      <td><year selected.two-way="params.year"></year></td>
+      </tr>
+      <tr>
+      <td>出題数:</td>
+      <td><num selected.two-way="params.num"></num></td>
+      </tr>
+      <tr>
+      <td><a route-href="route: exam; params.bind: {category: params.category, year: params.year, hour: params.hour, num: params.num}" class="btn btn-default">開始</a></td>
+      </tr>
+    </table>
   </section>
 </template>

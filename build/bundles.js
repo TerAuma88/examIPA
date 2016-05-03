@@ -2,13 +2,14 @@ module.exports = {
   "bundles": {
     "public/app-build": {
       "includes": [
-        "[*.js]",
-        "*.html!text",
+        "superagent",
+        "[**/*.js]",
+        "**/*.html!text",
         "*.css!text"
       ],
       "options": {
         "inject": true,
-        "minify": false,
+        "minify": true,
       }
     },
     "public/aurelia": {
@@ -22,12 +23,11 @@ module.exports = {
         "aurelia-loader-default",
         "aurelia-history-browser",
         "aurelia-logging-console",
-        "bootstrap",
         "bootstrap/css/bootstrap.css!text"
       ],
       "options": {
         "inject": true,
-        "minify": false,
+        "minify": true,
       }
     }
   }

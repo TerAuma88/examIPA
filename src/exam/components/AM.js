@@ -1,20 +1,24 @@
 import request from 'superagent';
+import {bindable, customElement} from 'aurelia-framework';
+import {getYearLabel, getHourLabel} from 'exam/const';
 
-export class Question{
-  heading = "平成27年度春 PM 午前Ⅱ";
-  reference = "平成27年度春 PM 午前Ⅱ問";
-  n = 25;
+@customElement('am')
+export class AM{
+  @bindable n = 25;
+  @bindable year;
+  @bindable hour;
+  @bindable category;
+  
   question = {};
   check;
   
   constructor() {
+    this.seq = 1;
     this.isAnswer = false;
   }
-  activate() {
-    this.seq = 1;
-    
-  }
+  
   attached() {
+    this.heading = getYearLabel(this.year) + " " + this.category + " " + getHourLabel(this.hour);
     this.getQuestion(this.seq);
   }
   
@@ -39,7 +43,7 @@ export class Question{
   getQuestion(number) {
     this.isLoaded = false;
     request.post('/question')
-    .send({quest:'resources/h27s/PM/AM2/q'+number})
+    .send({quest:"resources/" + this.year + "/" + this.category + "/" + this.hour + "/q" + number})
     .end((err,res) => {
       this.question = JSON.parse(res.body);
       this.isLoaded = true;
