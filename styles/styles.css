@@ -43,7 +43,7 @@ body {
 }
 
 section {
-  margin: 0 20px;
+  margin: 1em 1em;
 }
 
 .navbar-nav li.loader {
@@ -53,6 +53,7 @@ section {
 ul,li {
   list-style-type:none;
   padding-left:1ex;
+  cursor: pointer;
 }
 
 footer {
@@ -67,4 +68,10 @@ footer {
 img { 
   max-width: 100%; 
   height:auto;
+}
+td {
+  width: 6em;
+}
+tr {
+  height: 2.5em;
 }

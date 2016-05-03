@@ -1,0 +1,7 @@
+<template>
+  <require from="exam/components/AM"></require>
+  <am n.bind="n" year.bind="year" category.bind="category" hour.bind="hour" if.bind="!notFound"></am>
+  <section>
+    <p if.bind="notFound">準備中</p>
+  </section>
+</template>

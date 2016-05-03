@@ -1,19 +1,15 @@
-System.register(['bootstrap'], function (_export) {
-  'use strict';
+import 'bootstrap';
 
-  _export('configure', configure);
+export function configure(aurelia) {
+  aurelia.use
+    .standardConfiguration();
 
-  function configure(aurelia) {
-    aurelia.use.standardConfiguration();
+  //Uncomment the line below to enable animation.
+  //aurelia.use.plugin('aurelia-animator-css');
+  //if the css animator is enabled, add swap-order="after" to all router-view elements
 
-    aurelia.start().then(function () {
-      return aurelia.setRoot();
-    });
-  }
+  //Anyone wanting to use HTMLImports to load views, will need to install the following plugin.
+  //aurelia.use.plugin('aurelia-html-import-template-loader')
 
-  return {
-    setters: [function (_bootstrap) {}],
-    execute: function () {}
-  };
-});
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1haW4uanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7QUFFTyxXQUFTLFNBQVMsQ0FBQyxPQUFPLEVBQUU7QUFDakMsV0FBTyxDQUFDLEdBQUcsQ0FDUixxQkFBcUIsRUFBRSxDQUFDOztBQVMzQixXQUFPLENBQUMsS0FBSyxFQUFFLENBQUMsSUFBSSxDQUFDO2FBQU0sT0FBTyxDQUFDLE9BQU8sRUFBRTtLQUFBLENBQUMsQ0FBQztHQUMvQyIsImZpbGUiOiJtYWluLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0ICdib290c3RyYXAnO1xuXG5leHBvcnQgZnVuY3Rpb24gY29uZmlndXJlKGF1cmVsaWEpIHtcbiAgYXVyZWxpYS51c2VcbiAgICAuc3RhbmRhcmRDb25maWd1cmF0aW9uKCk7XG5cbiAgLy9VbmNvbW1lbnQgdGhlIGxpbmUgYmVsb3cgdG8gZW5hYmxlIGFuaW1hdGlvbi5cbiAgLy9hdXJlbGlhLnVzZS5wbHVnaW4oJ2F1cmVsaWEtYW5pbWF0b3ItY3NzJyk7XG4gIC8vaWYgdGhlIGNzcyBhbmltYXRvciBpcyBlbmFibGVkLCBhZGQgc3dhcC1vcmRlcj1cImFmdGVyXCIgdG8gYWxsIHJvdXRlci12aWV3IGVsZW1lbnRzXG5cbiAgLy9BbnlvbmUgd2FudGluZyB0byB1c2UgSFRNTEltcG9ydHMgdG8gbG9hZCB2aWV3cywgd2lsbCBuZWVkIHRvIGluc3RhbGwgdGhlIGZvbGxvd2luZyBwbHVnaW4uXG4gIC8vYXVyZWxpYS51c2UucGx1Z2luKCdhdXJlbGlhLWh0bWwtaW1wb3J0LXRlbXBsYXRlLWxvYWRlcicpXG5cbiAgYXVyZWxpYS5zdGFydCgpLnRoZW4oKCkgPT4gYXVyZWxpYS5zZXRSb290KCkpO1xufVxuIl0sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9
+  aurelia.start().then(() => aurelia.setRoot());
+}
