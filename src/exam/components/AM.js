@@ -45,7 +45,7 @@ export class AM{
     request.post('/question')
     .send({quest:"resources/" + this.year + "/" + this.category + "/" + this.hour + "/q" + number})
     .end((err,res) => {
-      this.question = JSON.parse(res.body);
+      this.question = res.body;
       this.isLoaded = true;
     });
   }

@@ -5,6 +5,7 @@
   <require from="exam/components/num"></require>
   <section>
     <p>プロジェクトマネージャ試験 平成27年度春 午前Ⅱのみ実装しています。</p>
+    <div if.bind="isError" style="color:#FF0000">未実装、または、存在しない試験です。区分、時間帯、年度を変更してください。</div>
     <table>
       <tr>
       <td>試験区分:</td>
