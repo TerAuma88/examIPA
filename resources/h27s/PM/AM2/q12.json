@@ -7,9 +7,5 @@
     "u": "デシジョンツリー分析",
     "e": "発生確率・影響度マトリックス"
   },
-  "correctAnswer": "e",
-  "comment":{
-    "ref": "",
-    "text": ""
-  }
+  "correctAnswer": "e"
 }

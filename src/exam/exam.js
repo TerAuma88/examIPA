@@ -1,14 +1,10 @@
 import {bindable} from 'aurelia-framework';
-import {implemented} from 'exam/implemented';
+import {isImplemented} from 'exam/implemented';
 
 export class Exam {
   canActivate(params) {
-    for (var i = 0; i < implemented.length; i++) {
-      if (implemented[i].category == params.category && implemented[i].year == params.year && implemented[i].hour == params.hour) {
-        return true;
-      }
-    }
-    navigate({route: '', name: 'top', moduleId: 'exam/top', nav: true, title:'トップページ'},"error");
+    // 未実装なら遷移させない
+    return isImplemented(params);
   }
   activate(params, routeConfig, navigationInstruction) {
     this.category = params.category;

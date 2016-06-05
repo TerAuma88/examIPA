@@ -7,9 +7,5 @@
     "u": "インシデントの傾向分析と予防処置",
     "e": "インシデントの未知の根本原因の特定"
   },
-  "correctAnswer": "i",
-  "comment":{
-    "ref": "",
-    "text": ""
-  }
+  "correctAnswer": "i"
 }

@@ -7,9 +7,5 @@
     "u": "1/X+1/Y+1/Z",
     "e": "1/(1/X+1/Y+1/Z)"
   },
-  "correctAnswer": "e",
-  "comment":{
-    "ref": "",
-    "text": ""
-  }
+  "correctAnswer": "e"
 }
