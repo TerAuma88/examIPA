@@ -13,7 +13,7 @@ app.use(express.static('public'));
 app.post('/question', function(req, res) {
   try {
     var str = req.body.quest + '.json';
-    var a = fs.readFileSync(req.body.quest + '.json', 'utf8');
+    var a = JSON.parse(fs.readFileSync(req.body.quest + '.json', 'utf8'));
     res.json(a);
   } catch (error){
     if (error.code === 'ENOENT') {

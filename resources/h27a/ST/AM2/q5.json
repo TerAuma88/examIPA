@@ -1,0 +1,12 @@
+{
+  "seq": "5",
+  "sentence": "IT投資案件Xの5年間の投資効果をNPVで評価する場合の算出式はどれか。",
+  "img": "/resources/h27a/ST/AM2/fig_q5_1.png",
+  "answers": {
+    "a": "<img src='/resources/h27a/ST/AM2/fig_q5_2.png'>",
+    "i": "<img src='/resources/h27a/ST/AM2/fig_q5_3.png'>",
+    "u": "<img src='/resources/h27a/ST/AM2/fig_q5_4.png'>",
+    "e": "<img src='/resources/h27a/ST/AM2/fig_q5_5.png'>"
+  },
+  "correctAnswer": "u"
+}

@@ -7,9 +7,5 @@
     "u": "品質保証教育訓練費",
     "e": "プログラム不具合修正費"
   },
-  "correctAnswer": "u",
-  "comment":{
-    "ref": "",
-    "text": ""
-  }
+  "correctAnswer": "u"
 }

@@ -4,6 +4,7 @@
     <div if.bind="isLoaded">
       <h4>【問題】</h4>
       <div innerHTML.bind="question.sentence"></div>
+      <div if.bind="question.img"><img src.bind="question.img"></div>
       <form role="form" submit.delegate="showAnswer()">
         <ul>
           <li>
@@ -31,11 +32,13 @@
       <h4>【解答】</h4>
       <p><img src.bind = "isCorrect"/>答え：${correctAnswer}</p>
       <button click.delegate="nextQuestion()">${next}</button>
-      <h4>【解説】</h4>
-      <blockquote cite=${question.comment.ref}>
-        <p innerHTML.bind="question.comment.text"></p>
-        <p>出展：<cite>${question.comment.ref}</cite></p>
-      </blockquote>
+      <div if.bind="question.comment">
+        <h4>【解説】</h4>
+        <blockquote cite=${question.comment.ref}>
+          <p innerHTML.bind="question.comment.text"></p>
+          <p>出展：<cite>${question.comment.ref}</cite></p>
+        </blockquote>
+      </div>
     </div>
     <div if.bind="!isLoaded" class="splash">
       <i class="fa fa-spinner fa-spin"></i>

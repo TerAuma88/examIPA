@@ -29,8 +29,12 @@ SPA（SinglePageApplication）のフレームワーク[Aurelia](http://aurelia.i
 
 # 動作環境
 Windows7 64bit
-Node v4.4.3
-npm v3.8.8
+Node: v4.4.3
+npm: v3.8.8
+
+CentOS
+Node: v5.8.0
+npm: v3.8.2
 
 # 開発用コマンド
 サーバは起動したままファイルの修正が可能
